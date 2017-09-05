@@ -1,17 +1,17 @@
 <?php
-namespace frontend\controllers;
+namespace appfrontend\controllers;
 
+use appfrontend\models\ContactForm;
+use appfrontend\models\PasswordResetRequestForm;
+use appfrontend\models\ResetPasswordForm;
+use appfrontend\models\SignupForm;
+use common\models\LoginForm;
 use Yii;
 use yii\base\InvalidParamException;
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
-use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
-use common\models\LoginForm;
-use frontend\models\PasswordResetRequestForm;
-use frontend\models\ResetPasswordForm;
-use frontend\models\SignupForm;
-use frontend\models\ContactForm;
 
 /**
  * Site controller
@@ -209,5 +209,10 @@ class SiteController extends Controller
         return $this->render('resetPassword', [
             'model' => $model,
         ]);
+    }
+
+    public function actionTest()
+    {
+        return $this->render('test.tpl', ['test' => 'smarty']);
     }
 }
