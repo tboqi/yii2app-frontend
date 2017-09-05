@@ -1,2 +1,2 @@
 <?php
-Yii::setAlias('@appfrontend', dirname(dirname(__DIR__)) . '/appfrontend');
+Yii::setAlias('@frontend', dirname(dirname(__DIR__)) . '/appfrontend');
