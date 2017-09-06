@@ -15,7 +15,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index.tpl');
+        return $this->render('index.tpl', ['test' => 'test']);
     }
 
     public function actionTest()

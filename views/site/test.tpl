@@ -1,1 +1,1 @@
-<div>123456{$test}</div>
+<div>123456{{$test}}</div>
